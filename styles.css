@@ -1,0 +1,97 @@
+/* 2000s style website CSS with discreet but eye-catching palette */
+
+body {
+    background-color: #1a1a1a;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #b22222;
+    padding: 20px;
+    border-bottom: 5px dotted #ffffff;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
+    animation: blink 1.5s infinite;
+}
+
+h2 {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+section {
+    background-color: #2f2f2f;
+    margin: 20px auto;
+    padding: 15px;
+    width: 80%;
+    border: 3px double #b22222;
+    box-shadow: 5px 5px 0 #000000;
+    color: #ffffff;
+}
+
+a {
+    color: #ff6347;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #b22222;
+    padding: 10px;
+    border-top: 5px dotted #ffffff;
+    font-size: 0.9em;
+    color: #ffffff;
+    margin-top: auto;
+}
+
+/* Blinking text animation */
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+/* Marquee style for fun */
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 15s linear infinite;
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+@keyframes marquee {
+    0% { transform: translate(100%, 0); }
+    100% { transform: translate(-100%, 0); }
+}
