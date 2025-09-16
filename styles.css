@@ -31,11 +31,18 @@ h2 {
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border: 5px solid #ffffff;
     border-radius: 50%;
     margin-top: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 99, 71, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7), 0 0 60px rgba(255, 99, 71, 0.5);
 }
 
 section {
@@ -94,4 +101,34 @@ footer {
 @keyframes marquee {
     0% { transform: translate(100%, 0); }
     100% { transform: translate(-100%, 0); }
+}
+
+.hidden-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hidden-text:hover {
+    opacity: 1;
+}
+
+/* Contact icons styles */
+.contact-item {
+    display: inline-block;
+    margin: 10px;
+}
+
+.contact-item a {
+    color: #ff6347;
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.contact-item a:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255, 99, 71, 0.8);
 }
