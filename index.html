@@ -8,22 +8,33 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="custom-cursor.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="rgb-border">
+    <div id="welcome-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Bem-vindo ao meu site!</h2>
+            <p>Este é o meu espaço pessoal, onde compartilho um pouco sobre mim e meus projetos. Espero que goste da visita!</p>
+            <p>Feche esta janela para iniciar a música.</p>
+        </div>
+    </div>
     <header>
         <h1>espaço do ryan!</h1>
-        <p class="hidden-text">ou melhor: katiiauu</p>
+        <p class="hidden-text">ou "katiiauu"</p>
         <nav>
             <a href="#about">Sobre</a>
             <a href="#projects">Projetos</a>
             <a href="#contact">Contato</a>
         </nav>
-        <img src="assets/img/me3.JPG" alt="Foto de Ryan" class="profile-pic">
+<img src="assets/img/me3.JPG" alt="Foto de Ryan" class="profile-pic">
+<div class="speech-balloon left">entre em contato!</div>
+<div class="speech-balloon right">achou maneiro?</div>
     </header>
 
     <section id="about" class="fade-in">
         <h2>Sobre Mim</h2>
-        <p>Oi! Eu sou Ryan Antonio Dos Reis De Oliveira, um desenvolvedor apaixonado e entusiasta de dados. Adoro criar coisas legais e explorar novas tecnologias.</p>
+        <p>Olá! Eu sou Ryan Reis, um desenvolvedor que ainda está no iniciando a vida nos códigos. Adoro criar coisas legais e explorar novas tecnologias.</p>
         <p>Confira meus projetos e entre em contato!</p>
     </section>
 
@@ -37,25 +48,25 @@
     </section>
 
     <section id="contact" class="fade-in">
-        <h2>Contato</h2>
+        <h2>Entre em contato!</h2>
         <div class="contact-item">
             <a href="https://www.linkedin.com/in/ryanreisoliveira/" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin fa-2x"></i>
+                <i class="fab fa-linkedin fa-2x"></i> <span>ryanreisoliveira</span>
             </a>
         </div>
         <div class="contact-item">
             <a href="https://instagram.com/reis.olv" target="_blank" title="Instagram">
-                <i class="fab fa-instagram fa-2x"></i>
+                <i class="fab fa-instagram fa-2x"></i> <span>reis.olv</span>
             </a>
         </div>
         <div class="contact-item">
-            <a href="mailto:ryanreisoliveira08@gmail.com" title="Email">
-                <i class="fas fa-envelope fa-2x"></i>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ryanreisoliveira08@gmail.com" target="_blank" title="Email">
+                <i class="fas fa-envelope fa-2x"></i> <span>ryanreisoliveira08@gmail.com</span>
             </a>
         </div>
         <div class="contact-item">
             <a href="https://github.com/rreis-nt" target="_blank" title="GitHub">
-                <i class="fab fa-github fa-2x"></i>
+                <i class="fab fa-github fa-2x"></i> <span>rreis-nt</span>
             </a>
         </div>
     </section>
@@ -65,22 +76,12 @@
         <p>&copy; 2025 Ryan Antonio Dos Reis De Oliveira - Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Simple Music Player -->
-    <div id="music-player">
-        <button id="toggle-player">▼</button>
-        <div id="track-info">
-            <span id="track-title">No Track</span>
-        </div>
-        <div id="controls">
-            <button id="prev">⏮</button>
-            <button id="play-pause">▶</button>
-            <button id="next">⏭</button>
-            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
-        </div>
-    </div>
-    <button id="show-player" style="display:none; position: fixed; bottom: 10px; left: 10px; background-color: #b22222; color: white; border: none; border-radius: 5px; padding: 10px; cursor: pointer; z-index: 10001;">▲</button>
+    <audio id="bg-music" loop>
+        <source src="assets/songs/nuts.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
 
-
+    <button id="music-btn" class="retro-button"><i class="fas fa-volume-up"></i></button>
 
     <script src="script.js"></script>
     <script src="assets/oneko.js-main/oneko.js" data-cat="assets/oneko.js-main/oneko.gif"></script>
