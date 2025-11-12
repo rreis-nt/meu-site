@@ -1,0 +1,33 @@
+Para enviar o `README.md` e o restante do seu projeto para o repositório GitHub, você precisará executar os seguintes comandos no seu terminal, dentro do diretório `c:\Users\Ryan\Downloads\site certo\`:
+
+1.  **Inicializar um novo repositório Git (se ainda não o fez):**
+    ```bash
+    git init
+    ```
+
+2.  **Adicionar todos os arquivos ao "staging area":**
+    ```bash
+    git add .
+    ```
+
+3.  **Confirmar as alterações com uma mensagem:**
+    ```bash
+    git commit -m "Adiciona arquivos iniciais do projeto e README"
+    ```
+
+4.  **Adicionar o repositório remoto do GitHub:**
+    ```bash
+    git remote add origin https://github.com/rreis-nt/meu-site
+    ```
+
+5.  **Renomear a branch principal para `main` (se necessário, ou use `master` se for o padrão):**
+    ```bash
+    git branch -M main
+    ```
+
+6.  **Enviar os arquivos para o GitHub:**
+    ```bash
+    git push -u origin main
+    ```
+
+Se você encontrar algum problema, certifique-se de que o Git está instalado em sua máquina e que você está autenticado no GitHub.
